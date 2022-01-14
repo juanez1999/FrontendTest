@@ -63,8 +63,8 @@ body{
     background-color: #F5F5FB;
 }
 
-@import './styles/typography';
 @import './styles/colors';
+@import './styles/typography';
 @import './styles/textField';
 @import './styles/buttons';
 @import './components/Header/header';
@@ -72,3 +72,5 @@ body{
 @import './components/Nav/NavOption/navOption';
 @import './components/Home/home';
 @import './components/Home/Welcome/welcome';
+@import './components/Home/Events/events';
+@import './components/Home/Events/CurrentEvent/currentEvent';

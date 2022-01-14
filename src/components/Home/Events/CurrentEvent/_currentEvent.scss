@@ -1,0 +1,27 @@
+.currentEvent{
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    background-color: $color-white;
+    border-radius: 13px;
+    box-shadow: 0 22px 34px 0 rgba(27,20,119,0.02);
+
+    &__data{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+
+        & p { 
+            color: $color-gray;
+            font-weight: 600;
+            font-family: $Gilroy;
+            font-size: 1rem;
+        }
+
+        & h2 {
+            font-weight: 600;
+            font-family: $Gilroy;
+            font-size: 1.1rem;
+        }
+    }
+}

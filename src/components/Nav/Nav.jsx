@@ -6,7 +6,7 @@ export const Nav = () => {
 
     return (
         <div className='nav'>
-            {imagesOpts.map((image) => <NavOption imageUrl={image} url={image}/>
+            {imagesOpts.map((image,index) => <NavOption key={index} imageUrl={image} url={image}/>
             )}
         </div>
     )
