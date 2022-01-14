@@ -1,0 +1,9 @@
+.nav{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 87px);
+    background-color: $color-bgBlue;
+    width: 55px;
+    align-items: center;
+    position: fixed;
+}

@@ -1,0 +1,17 @@
+.navOption{
+    opacity: 0.3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+
+    & img {
+        object-fit: contain;
+    }
+
+    &--active{
+        background-color: $color-bgBlueActive;
+        opacity: 1;
+    }
+}

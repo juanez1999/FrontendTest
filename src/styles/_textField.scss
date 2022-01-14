@@ -1,0 +1,36 @@
+.textfield{
+    position: relative;
+
+    &__input {
+        width: 350px;
+        height: 56px;
+        padding: 0 1rem;
+        border-style: none;
+        background-color: $color-bg;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &--imgLeft {
+        .textfield__input {
+            padding-left: 1.5rem;
+            padding-right: 3rem;
+        }
+
+        .textfield__label {
+            left: 3.5rem;
+        }
+
+        .textfield__icon {
+            width: 20px;
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+        }
+    }
+
+    
+}
