@@ -75,3 +75,9 @@ body{
 @import './components/Home/Events/events';
 @import './components/Home/Events/CurrentEvent/currentEvent';
 @import './components/Home/Activity/activity';
+@import './components/Home/Progress/_progress';
+@import './components/Home/Progress/ProgressOverview/progressOverview';
+@import './components/Home/Progress/ProgressSummary/progressSummary';
+@import './components/Home/Progress/ProgressOverview/ProgressOverviewCard/progressOverviewCard';
+@import './components/Home/Progress/ProgressSummary/ProgressSummaryCard/progressSummaryCard';
+

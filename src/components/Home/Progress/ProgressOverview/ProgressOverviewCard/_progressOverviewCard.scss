@@ -1,0 +1,37 @@
+.progressOverview__cardItem{
+    display: flex;
+    flex-direction: column;
+    color: $color-white;            
+    
+    &:nth-child(1){
+        border-right: 2px solid #FFFFFF;
+        padding-right: 25px;
+    }
+
+    &Status{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        & p {
+            font-size: 0.85rem;
+        }
+
+        & div {
+            width: 15px;
+            height: 15px;
+            border-radius: 10px;
+        }
+    }
+
+    &Hours{
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-top: 10px;
+
+        & h1 {
+            font-size: 2.8rem;
+        }
+    }
+}

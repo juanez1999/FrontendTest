@@ -3,7 +3,6 @@
     flex-direction: column;
     padding: 20px 30px;
     margin: 0px 100px;
-    margin-bottom: 100px;
 
     &__title{
         display: flex;
@@ -32,5 +31,14 @@
         width: 100%;
         margin-top: 30px;
         gap: 15px;
+
+        &Title{
+            display: flex;
+            flex-direction: row;
+
+            & p:nth-child(2) {
+                margin-left: 5px;
+            }
+        }
     }
 }

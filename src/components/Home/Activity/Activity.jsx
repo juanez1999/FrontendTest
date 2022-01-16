@@ -2,19 +2,19 @@ import React, {useState} from 'react'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { makeStyles, createStyles } from '@mui/styles';
 
 export const Activity = () => {
 
     const [activities, setActivities] = useState([
         {
-            activityText: 'You have new 5 followers including Kathryn Crawford and Piper Shaw',
+            activityText: 'You have new 5 followers including ',
             activityImg: 'follow',
             activityDescription: `Is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
             It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem`
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem`,
+            activityUsers: ['Kathryn Crawford','Piper Shaw']
         },
         {
             activityText: '3 new events were added to your calendar',
@@ -22,7 +22,8 @@ export const Activity = () => {
             activityDescription: `Is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
             It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem`
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem`,
+            activityUsers: ''
         },
         {
             activityText: 'You have 3 pending readings to complete 🤓',
@@ -30,7 +31,8 @@ export const Activity = () => {
             activityDescription: `Is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
             It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem`
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem`,
+            activityUsers: ''
         }
     ]);
 
@@ -53,7 +55,10 @@ export const Activity = () => {
                             classes={{root: classes.accordionSummaryRoot}}
                             >
                             <img src={`${process.env.PUBLIC_URL}/resources/${activity.activityImg}.png`} alt="" />
-                            <p>{activity.activityText}</p>
+                            <div className='activity__cardsTitle'>
+                                <p>{activity.activityText}</p>
+                                <p>{`${activity.activityUsers}`}</p>
+                            </div>
                         </AccordionSummary>
                         <AccordionDetails classes={{root: classes.accordionDetailsRoot}}>
                             <p>{activity.activityDescription}</p>

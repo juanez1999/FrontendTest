@@ -1,0 +1,31 @@
+.progressSummaryCard{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: $color-white;
+    border-radius: 13px;
+    justify-content: space-between;
+    width: 210px;
+    align-items: center;
+    min-height: 80px;
+
+    h1, h2 {
+        font-family: $Ghotam;
+    }
+
+    h2 {
+        font-weight: bold;
+        letter-spacing: -0.49px;
+        line-height: 18px;
+        width: 40%;
+        font-size: 1.05rem;
+        color: $color-gray;
+    }
+
+    h1{
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: -1.14px;
+        line-height: 48px;
+    }
+}

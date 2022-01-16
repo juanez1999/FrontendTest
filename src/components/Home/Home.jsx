@@ -2,6 +2,7 @@ import React from 'react'
 import { Welcome } from './Welcome/Welcome'
 import { Events } from './Events/Events'
 import { Activity } from './Activity/Activity'
+import { Progress } from './Progress/Progress'
 
 export const Home = () => {
     return (
@@ -9,6 +10,7 @@ export const Home = () => {
             <Welcome />
             <Events />
             <Activity />
+            <Progress />
         </div>
     )
 }
