@@ -12,10 +12,11 @@
         margin-left: 20px;
 
         & p { 
+            font-weight: 600;
             color: $color-gray;
-            font-weight: 500;
-            font-family: $Gilroy;
-            font-size: 1rem;
+            letter-spacing: 0;
+            line-height: 16px;
+            font-size: 0.9rem;
         }
 
         & h2 {
