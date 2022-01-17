@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useMatch,useResolvedPath } from "react-router-dom";
+import { useMatch, useResolvedPath } from "react-router-dom";
 
 export const NavOption = ({imageUrl,url}) => {
     let resolved = useResolvedPath(url);

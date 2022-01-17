@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import { CurrentEvent } from './CurrentEvent/CurrentEvent';
+import { ButtonEvents } from './ButtonEvents/ButtonEvents';
 
 export const Events = () => {
 
-    const [events, setEvents] = useState([
+    const [currentEvents, setCurrentEvents] = useState([
         {
             eventTime: '10:30 AM',
             eventTitle: 'Webinar: the basics of Figma and React',
@@ -16,6 +17,16 @@ export const Events = () => {
         },
     ]);
 
+    const [featuredEvents, setFeaturedEvents] = useState([
+        {
+            featuredEventTitle: 'Youth Talent & Education',
+            featuredEventDate: 'May, 20',
+        },
+        {
+            featuredEventTitle: 'Youth Talent & Education',
+            featuredEventDate: 'May, 20',
+        },
+    ]);
     return (
         <div className='events'>
             <h1>Events</h1>
@@ -25,27 +36,27 @@ export const Events = () => {
                         <p>SCIENCE</p>
                     </div>
                     <div className='events__contentSliderData'>
-                        <button className='events__contentSliderDataBtn' style={{backgroundImage: `url(${process.env.PUBLIC_URL}/resources/leftArrow.png)`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '50%'}}></button>
+                        <ButtonEvents direction={'left'}/>
                         <div className='events__contentSliderDataInfo'>
                             <div className='events__contentSliderDataInfoTitle'>
-                                <h1>Youth Talent &</h1>
-                                <h1>Education</h1>
+                                <h1>Youth Talent & Education</h1>
                             </div>
                             <h1 className='events__contentSliderDataInfoTime'>May, 20</h1>
                         </div>
-                        <button className='events__contentSliderDataBtn' style={{backgroundImage: `url(${process.env.PUBLIC_URL}/resources/rightArrow.png)`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '50%'}}></button>
+                        <ButtonEvents direction={'right'}/>
                         <div className="events__contentSliderDataButtons">
-                            <button style={{backgroundImage: `url(${process.env.PUBLIC_URL}/resources/leftArrow.png)`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '50%'}}></button>
-                            <button style={{backgroundImage: `url(${process.env.PUBLIC_URL}/resources/rightArrow.png)`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '50%'}}></button>
+                            <ButtonEvents direction={'left'}/>
+                            <ButtonEvents direction={'right'}/>
                         </div>
                     </div>
                 </div>
                 <div className='events__contentToday'>
                     <div className='events__contentTodayTitle'>
                         <h2>EVENTS TODAY</h2>
+                        <div className='events__contentTodayTitleLine'></div>
                     </div>
                     <div className='events__contentTodayCards'>
-                        {events.map( (event,index) => <CurrentEvent key={index} eventImg={event.eventImg} eventTime={event.eventTime} eventTitle={event.eventTitle} />)}
+                        {currentEvents.map( (event,index) => <CurrentEvent key={index} eventImg={event.eventImg} eventTime={event.eventTime} eventTitle={event.eventTitle} />)}
                     </div>
                 </div>
             </div>

@@ -65,7 +65,7 @@ export const Header = ({toggleNav}) => {
     return (
         <div className='fragmentHeader'>
             <div className='header'>
-                <button onClick={toggleNav} ><img className="header__menu" src={process.env.PUBLIC_URL +'/resources/menu.png'} alt='menu'></img></button>
+                <button onClick={toggleNav} className='header__btnNav'><img className="header__menu" src={process.env.PUBLIC_URL +'/resources/menu.png'} alt='menu'></img></button>
                 <img className="header__logo" src={process.env.PUBLIC_URL +'/resources/logo.png'} alt=""/>
                 <div className='textfield textfield--imgLeft'>
                     <input type="text" className="textfield__input" placeholder="Search and Find" />
@@ -89,7 +89,7 @@ export const Header = ({toggleNav}) => {
                         <div className='header__optionsProfileUser'>
                             <p>Clarence Russell</p>
                             <img src={process.env.PUBLIC_URL +'/resources/profile.png'} alt="" />
-                            <img src={process.env.PUBLIC_URL +'/resources/arrowDown.png'} alt="" />
+                            <button><img src={process.env.PUBLIC_URL +'/resources/arrowDown.png'} alt="arrowDown" /></button>
                         </div>
                     </div>
                 </div>

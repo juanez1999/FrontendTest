@@ -1,9 +1,10 @@
 import {Header} from './components/Header/Header'
 import { Nav } from './components/Nav/Nav';
 import { Home } from './components/Home/Home';
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useState, useRef } from 'react';
+
 
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
       {(matches || showNav) && <Nav ref={navRef} />}
       <Routes>
         <Route element={<Home/>} exact path="/home">
+        </Route>
+        <Route path="/" element={<Navigate to="/home" />}>
         </Route>
       </Routes>
     </Router>

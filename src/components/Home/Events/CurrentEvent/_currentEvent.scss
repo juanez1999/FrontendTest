@@ -5,6 +5,12 @@
     background-color: $color-white;
     border-radius: 13px;
     box-shadow: 0 22px 34px 0 rgba(27,20,119,0.02);
+    cursor: pointer;
+    transition: 0.3s;
+    
+    &:hover{
+        box-shadow: 0 22px 34px 0 rgba(27,20,119,0.11);
+    }
 
     @include respond-to('small') {
         flex-direction: column;

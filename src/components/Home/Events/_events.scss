@@ -142,16 +142,16 @@
             }
 
             &Title {
-                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
 
-                &::before {
-                    content: '';
-                    position: absolute;
+                &Line{
                     width: 70%;
-                    right: 0;
-                    bottom: 0.6rem;
-                    border-bottom: 2px #E8E8EE solid;
-                    
+                    height: 2px;
+                    background-color: #E8E8EE;
+
                     @include respond-to('small') {
                         width: 60%;
                     }
