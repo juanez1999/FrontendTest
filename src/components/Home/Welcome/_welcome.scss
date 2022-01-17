@@ -5,12 +5,20 @@
     justify-content: center;
     padding: 20px 30px;
 
+    @include respond-to('small') {
+        padding: 20px;
+    }
+
     &__title{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         margin: 0px 100px;
+
+        @include respond-to('small') {
+            margin: 0px;
+        }
 
         &Card{
             display: flex;
@@ -51,10 +59,29 @@
         height: 200px;
         gap:30px;
 
+        @include respond-to('small') {
+            margin: 0px;
+            margin-top: 60px;
+            flex-direction: column;
+            height: 270px;
+        }
+
         & img {
             transform: translateY(-12%);
             object-fit: contain;
             width: 285px;
+
+            @include respond-to('small') {
+                transform: translateY(-35%);
+                width: 190px;
+            }
+        }
+
+        & div {
+            @include respond-to('small') {
+                text-align: center;
+                transform: translateY(-65%);
+            }
         }
 
         & h1, h2 {

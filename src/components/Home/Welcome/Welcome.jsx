@@ -17,7 +17,7 @@ export const Welcome = () => {
                 <img src={process.env.PUBLIC_URL +`/resources/avatar.svg`}alt="" />
                 <div>
                     <h1>Welcome back, Clarence</h1>
-                    <h2>Ta-da! You're up to date</h2>
+                    <h2>Ta-da! You’re up to date. 🥳</h2>
                 </div>
             </div>
         </div>

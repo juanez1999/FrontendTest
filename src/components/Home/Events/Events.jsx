@@ -11,7 +11,7 @@ export const Events = () => {
         },
         {
             eventTime: '2:15 PM',
-            eventTitle: 'Team Building Activity',
+            eventTitle: 'Team Building Activity 🔥',
             eventImg: 'eventImg'
         },
     ]);
@@ -25,15 +25,19 @@ export const Events = () => {
                         <p>SCIENCE</p>
                     </div>
                     <div className='events__contentSliderData'>
-                        <button style={{backgroundImage: `url(${process.env.PUBLIC_URL}/resources/leftArrow.png)`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '50%'}}></button>
+                        <button className='events__contentSliderDataBtn' style={{backgroundImage: `url(${process.env.PUBLIC_URL}/resources/leftArrow.png)`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '50%'}}></button>
                         <div className='events__contentSliderDataInfo'>
-                            <div>
+                            <div className='events__contentSliderDataInfoTitle'>
                                 <h1>Youth Talent &</h1>
                                 <h1>Education</h1>
                             </div>
-                            <h1>May, 20</h1>
+                            <h1 className='events__contentSliderDataInfoTime'>May, 20</h1>
                         </div>
-                        <button style={{backgroundImage: `url(${process.env.PUBLIC_URL}/resources/rightArrow.png)`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '50%'}}></button>
+                        <button className='events__contentSliderDataBtn' style={{backgroundImage: `url(${process.env.PUBLIC_URL}/resources/rightArrow.png)`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '50%'}}></button>
+                        <div className="events__contentSliderDataButtons">
+                            <button style={{backgroundImage: `url(${process.env.PUBLIC_URL}/resources/leftArrow.png)`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '50%'}}></button>
+                            <button style={{backgroundImage: `url(${process.env.PUBLIC_URL}/resources/rightArrow.png)`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundSize: '50%'}}></button>
+                        </div>
                     </div>
                 </div>
                 <div className='events__contentToday'>

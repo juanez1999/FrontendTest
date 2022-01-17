@@ -4,6 +4,11 @@
     padding: 20px 30px;
     margin: 0px 100px;
 
+    @include respond-to('small') {
+        margin: 0px;
+        padding: 20px;
+    }
+
     &__title{
         display: flex;
         align-items: center;
@@ -22,6 +27,10 @@
             border-radius: 5px;
             background-color: rgba(157,155,182,0.17);
             padding: 15px;
+
+            @include respond-to('small') {
+                display: none;
+            }
         }
     }
 
@@ -35,10 +44,20 @@
         &Title{
             display: flex;
             flex-direction: row;
-
+            
             & p:nth-child(2) {
                 margin-left: 5px;
             }
+
+            @include respond-to('small') {
+                display: block;
+
+                & p:nth-child(2) {
+                    margin-left: 0px;
+                }
+            }
+
+            
         }
     }
 }

@@ -3,4 +3,12 @@
     padding: 20px 30px;
     margin: 0px 100px;
     gap: 50px;
+
+    @include respond-to('small') {
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 0px;
+    }
 }

@@ -7,4 +7,32 @@
     align-items: center;
     position: fixed;
     bottom: 0;
+
+    @include respond-to('small') {
+        z-index: 1000;
+        animation-name: animateIn;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-out;
+    }
+
+    &--hide{
+        animation-name: animateOut;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes animateIn {
+    0%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+}
+
+
+@keyframes animateOut {
+    100%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
 }

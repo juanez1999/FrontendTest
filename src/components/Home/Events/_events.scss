@@ -5,11 +5,20 @@
     padding: 20px 30px;
     margin: 0px 100px;
 
+    @include respond-to('small') {
+        padding: 20px;
+        margin: 0px;
+    }
+
     &__content{
         display: flex;
         width: 100%;
         margin-top: 30px;
         justify-content: space-between;
+
+        @include respond-to('small') {
+            flex-direction: column;
+        }
 
         &Slider{
             width: 65%;
@@ -19,6 +28,10 @@
             padding: 20px;
             height: 320px;
             align-items: flex-end;
+
+            @include respond-to('small') {
+                width: 100%;
+            }
 
             &Category{
                 background-color: $color-bgBlue;
@@ -30,6 +43,10 @@
                 color: $color-white;
                 margin-top: 10px;
                 width: 10%;
+
+                @include respond-to('small') {
+                    width: 25%;
+                }
 
                 & p{
                     font-size: 0.8rem;
@@ -43,12 +60,45 @@
                 justify-content: space-between;
                 height: 100%;
 
-                & Button{
+                @include respond-to('small') {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 30px;
+                }
+
+                &Buttons{
+                    display: none;
+                    
+                    @include respond-to('small') {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        & Button{
+                            @include respond-to('small') {
+                                display: flex;
+                                width: 47px;
+                                height: 32px;
+                                border-radius: 5px;
+                                background-color: $color-white;
+                                padding: 15px;
+                            }
+                        }
+                    }
+                }
+
+                &Btn{
                     width: 47px;
                     height: 32px;
                     border-radius: 5px;
                     background-color: $color-white;
                     padding: 15px;
+
+                    @include respond-to('small') {
+                        display: none;
+                    }
                 }
 
                 &Info{
@@ -58,9 +108,24 @@
                     width: 100%;
                     margin: 0px 30px;
 
-                    & h1 {
+                    @include respond-to('small') {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        margin: 0px;
+                    }
+
+                    &Title{
+                        & h1 {
+                            color: $color-white;
+                            font-size: 2.6rem;
+                        }
+                    }
+
+                    &Time{
                         color: $color-white;
-                        font-size: 2.6rem;
+                        @include respond-to('small') {
+                            font-size: 1.5rem;
+                        }
                     }
                 }
             }
@@ -70,6 +135,11 @@
             display: flex;
             flex-direction: column;
             width: 30%;
+
+            @include respond-to('small') {
+                width: 100%;
+                margin-top: 30px;
+            }
 
             &Title {
                 position: relative;
@@ -81,6 +151,10 @@
                     right: 0;
                     bottom: 0.6rem;
                     border-bottom: 2px #E8E8EE solid;
+                    
+                    @include respond-to('small') {
+                        width: 60%;
+                    }
                 }
             }
 
@@ -90,6 +164,11 @@
                 justify-content: space-between;
                 height: 100%;
                 margin-top: 35px;
+
+                @include respond-to('small') {
+                    gap: 20px;
+                    flex-direction: row;
+                }
             }
         }
     }

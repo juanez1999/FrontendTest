@@ -24,7 +24,7 @@ export const ProgressOverview = () => {
         dataGraph.push(dataObject);
     })
 
-    const [dataCompleted, setDataCompleted] = useState (40);
+    const [dataCompleted, setDataCompleted] = useState ((progress[0].progressTime/(progress[0].progressTime + progress[1].progressTime))*100);
 
     const setDataGraph = () => setData(dataGraph);
     React.useEffect(setDataGraph,[]);
@@ -54,7 +54,7 @@ export const ProgressOverview = () => {
                 options={options}
                 className='progressOverview__chartData'/>
                 <div className='progressOverview__chartCompleted'>
-                    <h1>{dataCompleted}</h1><p>%</p>
+                    <h1>{Math.floor(dataCompleted)}</h1><p>%</p>
                 </div>
             </div>
             <div className='progressOverview__card'>
