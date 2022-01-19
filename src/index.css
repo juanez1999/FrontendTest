@@ -581,6 +581,15 @@ input {
   font-weight: 500;
 }
 
+.carrousel {
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .events {
   display: -webkit-box;
   display: -ms-flexbox;
