@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
         top: 0,
         zIndex: 100
     },
-    activo: {
+    active: {
         opacity: 1,
         position: "relative",
         zIndex: 900,
@@ -24,18 +24,18 @@ const useStyles = makeStyles((theme) => ({
             flexDirection: 'column'
         }
     },
-    anterior: {
+    previous: {
         transform: "translateX(-100%)"
     },
-    siguiente: {
+    next: {
         transform: "translateX(100%)"
     }
 }));
 
-export const ContentSliderEvent = ({eventTitle,eventDate,activo,anterior,siguiente}) => {
+export const ContentSliderEvent = ({eventTitle,eventDate,active,previous,next}) => {
     const classes = useStyles();
 
-    return  <div className={classnames("events__contentSliderDataInfo" && activo ? classes.activo : classes.carrusel_elemento, anterior ? classes.anterior : "", siguiente ? classes.siguiente : "")}>
+    return  <div className={classnames("events__contentSliderDataInfo" && active ? classes.active : classes.carrusel_elemento, previous ? classes.previous : "", next ? classes.next : "")}>
                 <div className='events__contentSliderDataInfoTitle'>
                     <h1>{eventTitle}</h1>
                 </div>

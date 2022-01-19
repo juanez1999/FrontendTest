@@ -32,39 +32,39 @@ export const Events = () => {
         },
     ]);
 
-    const [elementoActivo, setElementoActivo] = useState(0);
-    const [anterior, setAnterior] = useState(eventSlider.length - 1);
-    const [siguiente, setSiguiente] = useState(elementoActivo + 1);
+    const [elementActive, setElementActive] = useState(0);
+    const [previous, setPrevious] = useState(eventSlider.length - 1);
+    const [next, setNext] = useState(elementActive + 1);
 
     useEffect(() => {
-        if (elementoActivo === 0) {
-            setAnterior(eventSlider.length - 1);
-            setSiguiente(elementoActivo + 1);
-        } else if (elementoActivo === eventSlider.length - 1) {
-            setAnterior(elementoActivo - 1);
-            setSiguiente(0);
+        if (elementActive === 0) {
+            setPrevious(eventSlider.length - 1);
+            setNext(elementActive + 1);
+        } else if (elementActive === eventSlider.length - 1) {
+            setPrevious(elementActive - 1);
+            setNext(0);
         } else {
-            setAnterior(elementoActivo - 1);
-            setSiguiente(elementoActivo + 1);
+            setPrevious(elementActive - 1);
+            setNext(elementActive + 1);
         }
-    }, [elementoActivo]);
+    }, [elementActive]);
 
     //mover elemento
-    const moverImagenDerecha = () => {
+    const moveImageRight = () => {
         // Si es el último elemento, restablezca a 0, de lo contrario +1
-        if (elementoActivo === eventSlider.length - 1) {
-        setElementoActivo(0);
+        if (elementActive === eventSlider.length - 1) {
+            setElementActive(0);
         } else {
-        setElementoActivo(elementoActivo + 1);
+            setElementActive(elementActive + 1);
         }
     };
 
     //mover elemento
-    const moverImagenIzquierda = () => {
-        if (elementoActivo === 0) {
-        setElementoActivo(eventSlider.length - 1);
+    const moveImageLeft = () => {
+        if (elementActive === 0) {
+            setElementActive(eventSlider.length - 1);
         } else {
-        setElementoActivo(elementoActivo - 1);
+            setElementActive(elementActive - 1);
         }
     };
 
@@ -77,16 +77,16 @@ export const Events = () => {
                         <p>SCIENCE</p>
                     </div>
                     <div className='events__contentSliderData'>
-                        <ButtonEvents direction={'left'} click={moverImagenIzquierda}/>  
+                        <ButtonEvents direction={'left'} click={moveImageLeft}/>  
                         <div className='carrousel'>
-                            {eventSlider.map((event,index) => <ContentSliderEvent key={index} eventTitle={event.eventSliderTitle} eventDate={event.eventSliderDate} activo={elementoActivo === index}
-                            anterior={anterior === index}
-                            siguiente={siguiente === index}/>)}
+                            {eventSlider.map((event,index) => <ContentSliderEvent key={index} eventTitle={event.eventSliderTitle} eventDate={event.eventSliderDate} active={elementActive === index}
+                            previous={previous === index}
+                            next={next === index}/>)}
                         </div>
-                        <ButtonEvents direction={'right'} click={moverImagenDerecha}/>
+                        <ButtonEvents direction={'right'} click={moveImageRight}/>
                         <div className="events__contentSliderDataButtons">
-                            <ButtonEvents direction={'left'} click={moverImagenIzquierda}/>
-                            <ButtonEvents direction={'right'} click={moverImagenDerecha}/>
+                            <ButtonEvents direction={'left'} click={moveImageLeft}/>
+                            <ButtonEvents direction={'right'} click={moveImageRight}/>
                         </div>
                     </div>
                 </div>
