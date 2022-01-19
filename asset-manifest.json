@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FrontendTest_Venturit/static/css/main.e84b5910.css",
+    "main.js": "/FrontendTest_Venturit/static/js/main.ae5e44f2.js",
+    "static/js/787.99a70850.chunk.js": "/FrontendTest_Venturit/static/js/787.99a70850.chunk.js",
+    "index.html": "/FrontendTest_Venturit/index.html",
+    "main.e84b5910.css.map": "/FrontendTest_Venturit/static/css/main.e84b5910.css.map",
+    "main.ae5e44f2.js.map": "/FrontendTest_Venturit/static/js/main.ae5e44f2.js.map",
+    "787.99a70850.chunk.js.map": "/FrontendTest_Venturit/static/js/787.99a70850.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e84b5910.css",
+    "static/js/main.ae5e44f2.js"
+  ]
+}
