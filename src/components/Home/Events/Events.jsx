@@ -16,17 +16,7 @@ export const Events = () => {
             eventImg: 'eventImg'
         },
     ]);
-
-    const [featuredEvents, setFeaturedEvents] = useState([
-        {
-            featuredEventTitle: 'Youth Talent & Education',
-            featuredEventDate: 'May, 20',
-        },
-        {
-            featuredEventTitle: 'Youth Talent & Education',
-            featuredEventDate: 'May, 20',
-        },
-    ]);
+    
     return (
         <div className='events'>
             <h1>Events</h1>

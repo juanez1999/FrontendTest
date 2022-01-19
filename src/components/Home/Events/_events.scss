@@ -115,6 +115,12 @@
                     }
 
                     &Title{
+                        width: 50%;
+
+                        @include respond-to('small') {
+                            width: 100%;
+                        }
+
                         & h1 {
                             color: $color-white;
                             font-size: 2.6rem;
@@ -123,8 +129,14 @@
 
                     &Time{
                         color: $color-white;
+                        text-align: end;
+                        width: 30%;
+
                         @include respond-to('small') {
                             font-size: 1.5rem;
+                            width: 100%;
+                            text-align: start;
+
                         }
                     }
                 }

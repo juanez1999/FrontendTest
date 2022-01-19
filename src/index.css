@@ -776,6 +776,16 @@ input {
   }
 }
 
+.events__contentSliderDataInfoTitle {
+  width: 50%;
+}
+
+@media (max-width: 576px) {
+  .events__contentSliderDataInfoTitle {
+    width: 100%;
+  }
+}
+
 .events__contentSliderDataInfoTitle h1 {
   color: #FFFFFF;
   font-size: 2.6rem;
@@ -783,11 +793,15 @@ input {
 
 .events__contentSliderDataInfoTime {
   color: #FFFFFF;
+  text-align: end;
+  width: 30%;
 }
 
 @media (max-width: 576px) {
   .events__contentSliderDataInfoTime {
     font-size: 1.5rem;
+    width: 100%;
+    text-align: start;
   }
 }
 
